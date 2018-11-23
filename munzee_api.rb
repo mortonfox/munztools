@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Wrapper for Munzee API.
+# Requires oauth2 and launchy gems. (Run 'gem install oauth2 launchy')
+
 require 'oauth2'
 require 'webrick'
 require 'launchy'
