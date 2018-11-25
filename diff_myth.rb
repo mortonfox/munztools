@@ -82,6 +82,7 @@ args = parse_cmdline
 munz = MunzeeAPI.new(force_login: args[:force_login])
 args[:startdate].upto(args[:enddate]) { |date|
   run_day(munz, date)
+  sleep(0.5) # Short delay to keep within API limit.
 }
 
 __END__
