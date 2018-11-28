@@ -48,28 +48,6 @@ class MunzeeAPI
 
   private
 
-  # Servlet to handle authentication callback.
-  class Callback < WEBrick::HTTPServlet::AbstractServlet
-    @auth_code = nil
-
-    # Handler will extract the auth code from the callback request.
-    def do_GET request, response
-      if request.query['code']
-        self.class.instance_variable_set(:@auth_code, request.query['code']) unless self.class.instance_variable_get(:@auth_code)
-        response.body = 'Okay'
-        raise WEBrick::HTTPStatus::OK
-      else
-        response.body = 'Missing code parameter'
-        raise WEBrick::HTTPStatus::BadRequest
-      end
-    end
-
-    def self.wait_auth_code
-      sleep 1 until @auth_code
-      @auth_code
-    end
-  end
-
   def load_config
     config = YAML.load_file(File.expand_path(@conf_file))
 
@@ -97,7 +75,20 @@ class MunzeeAPI
     # app.
     log = WEBrick::Log.new($stdout, WEBrick::Log::ERROR)
     server = WEBrick::HTTPServer.new(Port: @port, Logger: log, AccessLog: [])
-    server.mount '/oauth2/callback', Callback
+
+    auth_code = nil
+
+    server.mount_proc('/oauth2/callback') { |req, res|
+      code_param = req.query['code']
+      if code_param
+        auth_code ||= code_param
+        res.body = 'Okay'
+        raise WEBrick::HTTPStatus::OK
+      else
+        res.body = 'Missing code parameter'
+        raise WEBrick::HTTPStatus::BadRequest
+      end
+    }
 
     # Suppress the favicon.ico error message.
     server.mount_proc('/favicon.ico') { raise WEBrick::HTTPStatus::NotFound }
@@ -107,7 +98,7 @@ class MunzeeAPI
     # Open the authorization URL and wait for the callback.
     Launchy.open(url)
 
-    auth_code = Callback.wait_auth_code
+    sleep(1) until auth_code
 
     server.shutdown
 
