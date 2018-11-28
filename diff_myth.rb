@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Report how many different mythicals player has captured on each day.
 
 require_relative 'munzee_api'
@@ -12,7 +14,7 @@ MYTH_TYPES = {
   853 => 'Faun',
   953 => 'Hydra',
   1100 => 'Pegasus',
-  1168 =>'Cyclops',
+  1168 => 'Cyclops',
   1378 => 'Mermaid',
   1544 => 'Fairy'
 }.freeze
@@ -24,10 +26,10 @@ def parse_cmdline
 
   optp.banner = "Usage: #{File.basename $PROGRAM_NAME} [options] startdate [enddate]"
 
-  optp.separator <<-ENDS
+  optp.separator <<~ENDS
 
-Report how many different types of mythologicals the logged in player has
-captured on each given day.
+    Report how many different types of mythologicals the logged in player has
+    captured on each given day.
 
   ENDS
 
@@ -40,17 +42,18 @@ captured on each given day.
     args[:force_login] = true
   }
 
-  optp.separator <<-ENDS
+  optp.separator <<~ENDS
 
-Recommended format for startdate and enddate is YYYY-MM-DD, e.g. 2017-06-15.
-If only startdate is specified, then enddate is the same as startdate, i.e.
-it's a one-day date range.
+    Recommended format for startdate and enddate is YYYY-MM-DD, e.g. 2017-06-15.
+    If only startdate is specified, then enddate is the same as startdate, i.e.
+    it's a one-day date range.
   ENDS
 
   optp.parse!
 
   if ARGV.empty?
     warn 'Error: Date or date range needs to be specified!'
+    warn ''
     warn optp
     exit 1
   end
