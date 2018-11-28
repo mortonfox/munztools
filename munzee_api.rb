@@ -76,12 +76,13 @@ class MunzeeAPI
     log = WEBrick::Log.new($stdout, WEBrick::Log::ERROR)
     server = WEBrick::HTTPServer.new(Port: @port, Logger: log, AccessLog: [])
 
+    auth_mutex = Mutex.new
     auth_code = nil
 
     server.mount_proc('/oauth2/callback') { |req, res|
       code_param = req.query['code']
       if code_param
-        auth_code ||= code_param
+        auth_mutex.synchronize { auth_code ||= code_param }
         res.body = 'Okay'
         raise WEBrick::HTTPStatus::OK
       else
@@ -98,7 +99,13 @@ class MunzeeAPI
     # Open the authorization URL and wait for the callback.
     Launchy.open(url)
 
-    sleep(1) until auth_code
+    got_auth_code = false
+    until got_auth_code
+      sleep(1)
+      auth_mutex.synchronize {
+        got_auth_code = true if auth_code
+      }
+    end
 
     server.shutdown
 
