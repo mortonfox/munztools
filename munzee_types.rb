@@ -6,6 +6,12 @@ require 'rkelly'
 def parse_js_data script
   js = RKelly::Parser.new.parse(script)
   js.each { |node|
+    # Search for the first PropertyNode named 'data' in the object the script passes to Highcharts.
+    # In the PropertyNode, there is an ArrayNode.
+    # Each item in the array is an Element containing an ArrayNode.
+    # The inner ArrayNode has two Element nodes.
+    # The first Element contains a StringNode, which is the munzee type.
+    # The second Element contains a NumberNode, which is the count of that munzee type.
     if node.is_a?(RKelly::Nodes::PropertyNode) && node.name == 'data'
       return node.value.value.map { |item|
         pair = item.value.value
