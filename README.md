@@ -4,8 +4,8 @@ Misc tools for Munzee
 
 * diff\_myth: Show how many types of mythologicals you have captured on each
   day in a date range.
-* munzee\_types: Scrape the global munzee types page and generate reports of
-  munzees sorted by count.
+* munzee\_types: Parse the global Munzee types web page and report on Munzee
+  counts by type and category.
 
 ## Setup
 
@@ -33,8 +33,14 @@ You'll also need to obtain a client ID and client secret.
 
 ## Usage
 
-For diff\_myth help:
+For diff\_myth usage info:
 
-```
+```sh
 bundle exec ruby diff_myth.rb --help
+```
+
+For munzee\_types usage info:
+
+```sh
+bundle exec ruby munzee_types.rb --help
 ```

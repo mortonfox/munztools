@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'optparse'
 require 'oga'
 require 'rkelly'
 
@@ -335,7 +336,43 @@ def run_reports data
   puts
 end
 
-data = File.open('munzeetypes.html') { |io| parse_html(io) }
+def parse_cmdline
+  optp = OptionParser.new
+
+  optp.banner = "Usage: #{File.basename($PROGRAM_NAME)} [options] htmlfile"
+
+  optp.separator <<~ENDS
+
+    Parse the global Munzee types web page and report on Munzee counts by type
+    and category.
+
+  ENDS
+
+  optp.on('-h', '-?', '--help', 'Show this help message') {
+    puts optp
+    exit
+  }
+
+  optp.separator <<~ENDS
+
+    Navigate to https://statzee.munzee.com/global/types/ (Requires premium
+    membership) and save that web page. Pass the HTML file name as the first
+    parameter to this script.
+  ENDS
+
+  optp.parse!
+
+  if ARGV.empty?
+    warn "Error: HTML file needs to be specified!\n\n"
+    warn optp
+    exit 1
+  end
+
+  ARGV.first
+end
+
+fname = parse_cmdline
+data = File.open(fname) { |io| parse_html(io) }
 run_reports(data)
 
 __END__
