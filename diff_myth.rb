@@ -24,7 +24,7 @@ def parse_cmdline
 
   optp = OptionParser.new
 
-  optp.banner = "Usage: #{File.basename $PROGRAM_NAME} [options] startdate [enddate]"
+  optp.banner = "Usage: #{File.basename($PROGRAM_NAME)} [options] startdate [enddate]"
 
   optp.separator <<~ENDS
 
@@ -52,8 +52,7 @@ def parse_cmdline
   optp.parse!
 
   if ARGV.empty?
-    warn 'Error: Date or date range needs to be specified!'
-    warn ''
+    warn "Error: Date or date range needs to be specified!\n\n"
     warn optp
     exit 1
   end
