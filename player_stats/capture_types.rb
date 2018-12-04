@@ -77,6 +77,22 @@ def run_reports data
   puts "All Munzees:\n\n"
   report(data, data.keys)
   puts
+
+  puts "Clan Weapons:\n\n"
+  report(data, CLAN_WEAPONS)
+  puts
+
+  puts "Jewels\n\n"
+  report(data, JEWELS)
+  puts
+
+  puts "Destinations\n\n"
+  report(data, DESTINATIONS)
+  puts
+
+  puts "Rooms\n\n"
+  report(data, ROOMS)
+  puts
 end
 
 args = parse_cmdline
