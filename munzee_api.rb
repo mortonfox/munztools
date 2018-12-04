@@ -46,6 +46,13 @@ class MunzeeAPI
     res.parsed['data']
   end
 
+  def get path, params = {}
+    res = @token.get(path, params: params)
+    raise HTTPError, "#{res.status} #{res.body}" if res.status != 200
+
+    res.parsed['data']
+  end
+
   private
 
   def load_config

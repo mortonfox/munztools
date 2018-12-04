@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Parse the global Munzee types web page and report on Munzee counts by type
+# and category.
+
 require 'optparse'
 require 'oga'
 require 'rkelly'

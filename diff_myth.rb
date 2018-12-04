@@ -3,7 +3,6 @@
 # Report how many different mythicals player has captured on each day.
 
 require_relative 'munzee_api'
-require 'set'
 require 'optparse'
 
 MYTH_TYPES = {
