@@ -8,6 +8,7 @@ Misc tools for Munzee
   counts by type and category.
 * capture\_types: Report on player's captures by type and category.
 * deploy\_types: Report on player's deploys by type and category.
+* munz\_info: Retrieve detailed information on a specific Munzee.
 
 ## Setup
 
@@ -57,4 +58,10 @@ For deploy\_types usage info:
 
 ```sh
 bundle exec ruby player_stats/deploy_types.rb --help
+```
+
+For munz\_info usage info:
+
+```sh
+bundle exec ruby munz_info --help
 ```
