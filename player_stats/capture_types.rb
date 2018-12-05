@@ -54,7 +54,7 @@ def commaify num
 end
 
 def report data, keys
-  by_count = keys.sort { |a, b|
+  by_count = keys.select { |k| data.key?(k) }.sort { |a, b|
     if data[a][:count] == data[b][:count]
       data[a][:name].downcase <=> data[b][:name].downcase
     else
@@ -92,6 +92,42 @@ def run_reports data
 
   puts "Rooms\n\n"
   report(data, ROOMS)
+  puts
+
+  puts "Places\n\n"
+  report(data, PLACES)
+  puts
+
+  puts "Virtuals\n\n"
+  report(data, VIRTUALS)
+  puts
+
+  puts "Flats\n\n"
+  report(data, FLATS)
+  puts
+
+  puts "Evolutions\n\n"
+  report(data, EVOLUTIONS)
+  puts
+
+  puts "Resellers\n\n"
+  report(data, RESELLERS)
+  puts
+
+  puts "Elementals\n\n"
+  report(data, ELEMENTALS)
+  puts
+
+  puts "Zodiacs\n\n"
+  report(data, ZODIACS)
+  puts
+
+  puts "Mythologicals\n\n"
+  report(data, MYTHOLOGICALS)
+  puts
+
+  puts "Pouch Creatures\n\n"
+  report(data, POUCH_CREATURES)
   puts
 end
 
