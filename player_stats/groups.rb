@@ -47,41 +47,73 @@ PLACES = [
   1486, # Hospital
   1487, # Post Office
   1488, # Cemetery
+  1551, # Unique Attraction
   1631 # Virtual Garden
-  # Unique Attraction?
 ].freeze
 
 VIRTUALS = [
-  1421, # Virtual Blue
   1409, # Virtual
-  1414, # Virtual Black
   1410, # Virtual Rainbow
-  1435, # Virtual Forest Green
-  1466, # Virtual Red
-  1473, # Virtual Brown
-  1434, # Virtual Green
-  1430, # Virtual Indigo
-  1442, # Virtual Yellow
-  1418, # Virtual Violet
-  1445, # Virtual Orange
-  1449, # Virtual Pink
-  1431, # Virtual Turquoise Blue
-  1419, # Virtual Plum
-  1465, # Virtual Scarlet
-  1415, # Virtual Orchid
-  1460, # Virtual Macaroni and Cheese
-  1428, # Virtual Cerulean
-  1417, # Virtual Purple Mountains Majesty
-  1433, # Virtual Granny Smith Apple
-  1413, # Virtual Gray
-  1444, # Virtual Dandelion
-  1446, # Virtual Burnt Orange
-  1412, # Virtual Silver
-  1425, # Virtual Cornflower
   1411, # Virtual Timberwolf
+  1412, # Virtual Silver
+  1413, # Virtual Gray
+  1414, # Virtual Black
+  1415, # Virtual Orchid
+  1416, # Virtual Wisteria
+  1417, # Virtual Purple Mountains Majesty
+  1418, # Virtual Violet
+  1419, # Virtual Plum
+  1420, # Virtual Blue Violet
+  1421, # Virtual Blue
+  1423, # Virtual Cadet Blue
+  1424, # Virtual Periwinkle
+  1425, # Virtual Cornflower
+  1426, # Virtual Blue Green
+  1427, # Virtual Pacific Blue
+  1428, # Virtual Cerulean
+  1429, # Virtual Robin Egg Blue
+  1430, # Virtual Indigo
+  1431, # Virtual Turquoise Blue
   1432, # Virtual Sea Green
-  1462 # Virtual Burnt Sienna
-  # Plus 33 more colors
+  1433, # Virtual Granny Smith Apple
+  1434, # Virtual Green
+  1435, # Virtual Forest Green
+  1436, # Virtual Asparagus
+  1437, # Virtual Olive Green
+  1438, # Virtual Yellow Green
+  1439, # Virtual Green Yellow
+  1440, # Virtual Spring Green
+  1441, # Virtual Gold
+  1442, # Virtual Yellow
+  1443, # Virtual Goldenrod
+  1444, # Virtual Dandelion
+  1445, # Virtual Orange
+  1446, # Virtual Burnt Orange
+  1448, # Virtual Melon
+  1449, # Virtual Pink
+  1450, # Virtual Carnation Pink
+  1451, # Virtual Mauvelous
+  1452, # Virtual Salmon
+  1453, # Virtual Tickle Me Pink
+  1454, # Virtual Magenta
+  1455, # Virtual Wild Strawberry
+  1456, # Virtual Violet Red
+  1457, # Virtual Red Violet
+  1458, # Virtual Apricot
+  1459, # Virtual Peach
+  1460, # Virtual Macaroni and Cheese
+  1461, # Virtual Tan
+  1462, # Virtual Burnt Sienna
+  1463, # Virtual Bittersweet
+  1464, # Virtual Red Orange
+  1465, # Virtual Scarlet
+  1466, # Virtual Red
+  1467, # Virtual Brick Red
+  1468, # Virtual Mahogany
+  1469, # Virtual Chestnut
+  1470, # Virtual Tumbleweed
+  1471, # Virtual Raw Sienna
+  1473 # Virtual Brown
 ].freeze
 
 FLATS = [
@@ -191,47 +223,50 @@ ZODIACS = [
   1271, # Dog Chinese Zodiac
   1272, # Pig Chinese Zodiac
   1277, # Dragon Chinese Zodiac
-  1273 # Rat Chinese Zodiac
-  # ox, tiger, rabbit, snake?
+  1273, # Rat Chinese Zodiac
+  1274, # Ox Chinese Zodiac
+  1275, # Tiger Chinese Zodiac
+  1276, # Rabbit Chinese Zodiac
+  1278 # Snake Chinese Zodiac
 ].freeze
 
 MYTHOLOGICALS = [
-  1100, # Pegasus
-  725, # Yeti
-  953, # Hydra
-  853, # Faun
-  1168, # Cyclops
-  573, # Dragon
-  508, # Leprechaun
   505, # The Unicorn
-  1378, # Mermaid
-  1544, # Fairy
-  1603, # Wildfire Fairy
-  1537, # Retired Dragon
-  1536, # Retired Leprechaun
-  1535, # Retired Unicorn
-  1602, # Dryad Fairy
-  1604, # Battle Unicorn
-  1151, # Gnome Leprechaun
+  508, # Leprechaun
+  573, # Dragon
+  725, # Yeti
+  853, # Faun
+  953, # Hydra
+  1100, # Pegasus
   1118, # Rainbow Unicorn
-  1237, # Cherub
-  1229, # Fire Pegasus
+  1151, # Gnome Leprechaun
   1164, # Ice Dragon
+  1168, # Cyclops
   1210, # Sasquatch Yeti
-  1329, # Chimera
+  1229, # Fire Pegasus
+  1237, # Cherub
   1268, # Ogre
+  1329, # Chimera
+  1378, # Mermaid
   1485, # Siren
-  1542 # Retired Pegasus
-  # Melusine mermaid?
-  # Dwarf Leprechaun?
-  # Hippocamp Unicorn?
-  # Retired Yeti?
-  # Retired Faun?
-  # Hot Spring Mermaid?
-  # Fairy Godmother?
-  # Retired Hydra?
-  # Goblin Leprechaun?
-  # Retired Cyclops?
+  1535, # Retired Unicorn
+  1536, # Retired Leprechaun
+  1537, # Retired Dragon
+  1538, # Retired Yeti
+  1539, # Retired Faun
+  1540, # Retired Hydra
+  1542, # Retired Pegasus
+  1543, # Retired Cyclops
+  1544, # Fairy
+  1602, # Dryad Fairy
+  1603, # Wildfire Fairy
+  1604, # Battle Unicorn
+  1605, # Hippocamp Unicorn
+  1630, # Fairy Godmother
+  1646, # Dwarf Leprechaun
+  1647, # Goblin Leprechaun
+  1648, # Hot Spring Mermaid
+  1649 # Melusine Mermaid
 ].freeze
 
 POUCH_CREATURES = [
