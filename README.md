@@ -6,6 +6,8 @@ Misc tools for Munzee
   day in a date range.
 * munzee\_types: Parse the global Munzee types web page and report on Munzee
   counts by type and category.
+* capture\_types: Report on player's captures by type and category.
+* deploy\_types: Report on player's deploys by type and category.
 
 ## Setup
 
@@ -43,4 +45,16 @@ For munzee\_types usage info:
 
 ```sh
 bundle exec ruby munzee_types.rb --help
+```
+
+For capture\_types usage info:
+
+```sh
+bundle exec ruby player_stats/capture_types.rb --help
+```
+
+For deploy\_types usage info:
+
+```sh
+bundle exec ruby player_stats/deploy_types.rb --help
 ```

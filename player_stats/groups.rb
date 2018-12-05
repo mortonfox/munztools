@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 CLAN_WEAPONS = [
   52, # Mace
   53, # Longsword
@@ -5,7 +7,7 @@ CLAN_WEAPONS = [
   306, # Hammer
   998, # Crossbow
   1248 # Catapult
-]
+].freeze
 
 JEWELS = [
   40, # Diamond
@@ -16,21 +18,21 @@ JEWELS = [
   290, # Virtual Amethyst
   584, # Pink Diamond
   681 # Virtual Sapphire
-]
+].freeze
 
 DESTINATIONS = [
   70, # Motel
   170, # Hotel
   470, # Virtual Resort
   970 # Time Share
-]
+].freeze
 
 ROOMS = [
   71, # Motel Room
   171, # Hotel Room
   471, # Virtual Resort Room
   971 # Time Share Room
-]
+].freeze
 
 PLACES = [
   782, # Airport
@@ -47,7 +49,7 @@ PLACES = [
   1488, # Cemetery
   1631 # Virtual Garden
   # Unique Attraction?
-]
+].freeze
 
 VIRTUALS = [
   1421, # Virtual Blue
@@ -80,14 +82,14 @@ VIRTUALS = [
   1432, # Virtual Sea Green
   1462 # Virtual Burnt Sienna
   # Plus 33 more colors
-]
+].freeze
 
 FLATS = [
   353, # Flat Rob
   1015, # Flat Matt
   1581, # Flat Hammock
   1338 # Flat Lou
-]
+].freeze
 
 EVOLUTIONS = [
   807, # Muscle Car
@@ -150,7 +152,7 @@ EVOLUTIONS = [
   703, # Eggs
   705, # Chick
   707 # Chicken
-]
+].freeze
 
 RESELLERS = [
   513, # DDCards Reseller
@@ -163,7 +165,7 @@ RESELLERS = [
   696, # SCGS Reseller
   512, # GeoHobbies Reseller
   550 # Ruja Reseller
-]
+].freeze
 
 ELEMENTALS = [
   1086, # Air Mystery
@@ -171,7 +173,7 @@ ELEMENTALS = [
   651, # Ice Mystery
   851, # Earth Mystery
   1020 # Water Mystery
-]
+].freeze
 
 ZODIACS = [
   319, # Cancer
@@ -191,7 +193,7 @@ ZODIACS = [
   1277, # Dragon Chinese Zodiac
   1273 # Rat Chinese Zodiac
   # ox, tiger, rabbit, snake?
-]
+].freeze
 
 MYTHOLOGICALS = [
   1100, # Pegasus
@@ -230,12 +232,12 @@ MYTHOLOGICALS = [
   # Retired Hydra?
   # Goblin Leprechaun?
   # Retired Cyclops?
-]
+].freeze
 
 POUCH_CREATURES = [
   1240, # Tuli
   1370, # Vesi
   1638, # Muru
-]
+].freeze
 
 __END__

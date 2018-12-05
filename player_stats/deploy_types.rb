@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Report on the logged in player's captures by type and category.
+# Report on the logged in player's deploys by type and category.
 
 require_relative '../munzee_api'
 require_relative 'groups'
@@ -16,7 +16,7 @@ def parse_cmdline
 
   optp.separator <<~ENDS
 
-    Report on the logged in player's captures by type and category.
+    Report on the logged in player's deploys by type and category.
 
   ENDS
 
@@ -38,13 +38,13 @@ def fetch_data munz
   result = munz.get('/user/current')
   username = result['username']
 
-  result = munz.post('/statzee/player/captures/types/', username: username)
+  result = munz.post('/statzee/player/deploys/types/', username: username)
 
   data = {}
   result['types'].each { |rec|
     data[rec['capture_type_id'].to_i] = {
       name: rec['name'],
-      count: rec['captures'].to_i
+      count: rec['munzees'].to_i
     }
   }
   data

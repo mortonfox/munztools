@@ -266,7 +266,7 @@ def run_reports data
     'Egg', # Dinosaur Egg
     'Eggs',
     'Chick',
-    'Chicken',
+    'Chicken'
   ]
 
   puts "Evolutions:\n\n"
