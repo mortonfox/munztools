@@ -9,8 +9,12 @@ Misc tools for Munzee
 * capture\_types: Report on player's captures by type and category.
 * deploy\_types: Report on player's deploys by type and category.
 * munz\_info: Retrieve detailed information on a specific Munzee.
+* munz\_addr: Reverse-geocode the coordinates of a Munzee to get its street
+  address.
 
 ## Setup
+
+### General Setup
 
 Run ``bundle install`` to set up the required gems.
 
@@ -33,6 +37,19 @@ You'll also need to obtain a client ID and client secret.
     ```
 
     where CLIENT\_ID and CLIENT\_SECRET are the ID and Secret you noted above.
+
+### Additional setup for munz\_addr
+
+munz\_addr requires a Bing Maps key. Follow the instructions in [Getting a
+Bing Maps
+Key](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key).
+Then add the following line to `.munztools.conf`:
+
+```yaml
+bing_maps_key: BING_MAPS_KEY
+```
+
+where BING\_MAPS\_KEY is the key you obtained from the Bing Maps Dev Center.
 
 ## Usage
 
@@ -64,4 +81,10 @@ For munz\_info usage info:
 
 ```sh
 bundle exec ruby munz_info --help
+```
+
+For munz\_addr usage info:
+
+```sh
+bundle exec ruby munz_addr --help
 ```

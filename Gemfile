@@ -10,3 +10,6 @@ gem 'oauth2'
 # For munzee_types.rb
 gem 'oga'
 gem 'rkelly-remix'
+
+# For munz_addr.rb
+gem 'rest-client'
