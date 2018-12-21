@@ -28,7 +28,7 @@ You'll also need to obtain a client ID and client secret.
     * Redirect URI: `http://localhost:8557/oauth2/callback`
 1. Click on 'Create App'.
 1. Take note of the ID and Secret of the newly created app.
-1. Create a file named `.munztools.conf` in your home directory.
+1. Create a text file named `.munztools.conf` in your home directory.
 1. Add the following lines to this file:
 
     ```yaml
