@@ -48,7 +48,8 @@ PLACES = [
   1487, # Post Office
   1488, # Cemetery
   1551, # Unique Attraction
-  1631 # Virtual Garden
+  1631, # Virtual Garden
+  1770 # Cinema
 ].freeze
 
 VIRTUALS = [
@@ -183,7 +184,10 @@ EVOLUTIONS = [
   800, # Egg
   703, # Eggs
   705, # Chick
-  707 # Chicken
+  707, # Chicken
+  1775, # Tulip Seed
+  1790, # Lily Seed
+  1798 # Carnation Seed
 ].freeze
 
 RESELLERS = [
@@ -273,6 +277,10 @@ POUCH_CREATURES = [
   1240, # Tuli
   1370, # Vesi
   1638, # Muru
+  1752, # Mitmegu
+  1753, # Jootmegu
+  1754, # Rohitmegu
+  1755 # Lokemegu
 ].freeze
 
 __END__
