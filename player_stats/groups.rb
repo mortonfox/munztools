@@ -226,12 +226,16 @@ ZODIACS = [
   320, # Leo
   1271, # Dog Chinese Zodiac
   1272, # Pig Chinese Zodiac
-  1277, # Dragon Chinese Zodiac
   1273, # Rat Chinese Zodiac
   1274, # Ox Chinese Zodiac
   1275, # Tiger Chinese Zodiac
   1276, # Rabbit Chinese Zodiac
-  1278 # Snake Chinese Zodiac
+  1277, # Dragon Chinese Zodiac
+  1278, # Snake Chinese Zodiac
+  1279, # Horse Chinese Zodiac
+  1280, # Goat Chinese Zodiac
+  1281, # Monkey Chinese Zodiac
+  1282 # Rooster Chinese Zodiac
 ].freeze
 
 MYTHOLOGICALS = [
