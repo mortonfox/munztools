@@ -46,10 +46,27 @@ def parse_cmdline
   args
 end
 
+def conv_coord coordstr, dirs
+  coord = coordstr.to_f
+  dir = dirs[coord < 0 ? 1 : 0]
+  coord = coord.abs
+  degs = coord.floor
+  mins = (coord - degs) * 60
+  "#{dir} #{degs} #{mins.round(3)} / #{coordstr}"
+end
+
 def show_info munz, url
   result = munz.post('/munzee/', url: url, closest: 0)
   result.each { |k, v|
-    puts format('%-28s %s', "#{k}:", v.is_a?(String) || v.is_a?(Numeric) ? v.to_s : v.inspect)
+    valstr = case k
+             when 'latitude'
+               conv_coord(v, 'NS')
+             when 'longitude'
+               conv_coord(v, 'EW')
+             else
+               v.is_a?(String) || v.is_a?(Numeric) ? v.to_s : v.inspect
+             end
+    puts format('%-28s %s', "#{k}:", valstr)
   }
 end
 
