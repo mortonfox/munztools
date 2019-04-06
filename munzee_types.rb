@@ -38,13 +38,15 @@ def commaify num
 end
 
 def report data, keys
-  by_count = keys.sort { |a, b|
-    if data[a] == data[b]
-      a.downcase <=> b.downcase
-    else
-      data[b] <=> data[a]
-    end
-  }
+  by_count = keys
+    .select { |k| data.key?(k) }
+    .sort { |a, b|
+      if data[a] == data[b]
+        a.downcase <=> b.downcase
+      else
+        data[b] <=> data[a]
+      end
+    }
 
   puts format('%4s %-35s %9s', '', 'Munzee Type', 'Count')
   puts '=' * 50
@@ -115,7 +117,8 @@ def run_reports data
     'POI Wildlife',
     'POI Cemetery',
     'POI University',
-    'POI Faith Place'
+    'POI Faith Place',
+    'POI Cinema'
   ]
 
   puts "Places:\n\n"
@@ -266,7 +269,12 @@ def run_reports data
     'Egg', # Dinosaur Egg
     'Eggs',
     'Chick',
-    'Chicken'
+    'Chicken',
+    'Carnation',
+    'Rose',
+    'Tulip',
+    'Lily',
+    'Butterfly'
   ]
 
   puts "Evolutions:\n\n"
@@ -322,7 +330,11 @@ def run_reports data
     'Tiger Chinese Zodiac',
     'Rabbit Chinese Zodiac',
     'Dragon Chinese Zodiac',
-    'Snake Chinese Zodiac'
+    'Snake Chinese Zodiac',
+    'Goat Chinese Zodiac',
+    'Rooster Chinese Zodiac',
+    'Monkey Chinese Zodiac',
+    'Horse Chinese Zodiac'
   ]
 
   puts "Zodiacs:\n\n"
@@ -365,17 +377,34 @@ def run_reports data
     'Retired Hydra',
     'Goblin Leprechaun',
     'Retired Pegasus',
-    'Retired Cyclops'
+    'Retired Cyclops',
+    'Banshee',
+    'Wyvern Dragon',
+    'Chinese Dragon',
+    'Lycanthrope Yeti',
+    'Reptoid Yeti'
   ]
 
   puts "Mythologicals:\n\n"
   report(data, mythologicals)
   puts
 
-  pouch_creatures = %w[Tuli Vesi Muru]
+  pouch_creatures = %w[Tuli Vesi Muru Mitmegu Hadavale]
 
   puts "Pouch Creatures:\n\n"
   report(data, pouch_creatures)
+  puts
+
+  uncategorized = (
+    data.keys - clan_weapons - jewels -
+    destinations - places - virtuals - 
+    flats - evolutions - resellers - 
+    elementals - zodiacs - 
+    mythologicals - pouch_creatures
+  )
+
+  puts "Uncategorized:\n\n"
+  report(data, uncategorized)
   puts
 end
 
