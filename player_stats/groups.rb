@@ -65,7 +65,8 @@ VIRTUALS = [
   1418, # Virtual Violet
   1419, # Virtual Plum
   1420, # Virtual Blue Violet
-  1421, # Virtual Blue
+  1421, # Virtual Indigo
+  1422, # Virtual Blue
   1423, # Virtual Cadet Blue
   1424, # Virtual Periwinkle
   1425, # Virtual Cornflower
@@ -90,6 +91,7 @@ VIRTUALS = [
   1444, # Virtual Dandelion
   1445, # Virtual Orange
   1446, # Virtual Burnt Orange
+  1447, # Virtual Orange
   1448, # Virtual Melon
   1449, # Virtual Pink
   1450, # Virtual Carnation Pink
@@ -114,14 +116,15 @@ VIRTUALS = [
   1469, # Virtual Chestnut
   1470, # Virtual Tumbleweed
   1471, # Virtual Raw Sienna
-  1473 # Virtual Brown
+  1472, # Virtual Brown
+  1473 # Virtual Sepia
 ].freeze
 
 FLATS = [
   353, # Flat Rob
   1015, # Flat Matt
-  1581, # Flat Hammock
-  1338 # Flat Lou
+  1338, # Flat Lou
+  1581 # Flat Hammock
 ].freeze
 
 EVOLUTIONS = [
@@ -186,8 +189,18 @@ EVOLUTIONS = [
   705, # Chick
   707, # Chicken
   1775, # Tulip Seed
+  1776, # Tulip Germination
+  1777, # Tulip Growth
+  1782, # Rose Seed
+  1783, # Rose Germination
+  1784, # Rose Growth
   1790, # Lily Seed
-  1798 # Carnation Seed
+  1791, # Lily Germination
+  1792, # Lily Growth
+  1798, # Carnation Seed
+  1799, # Carnation Germination
+  1800, # Carnation Growth
+  1836, # Butterfly Egg
 ].freeze
 
 RESELLERS = [
@@ -274,17 +287,30 @@ MYTHOLOGICALS = [
   1646, # Dwarf Leprechaun
   1647, # Goblin Leprechaun
   1648, # Hot Spring Mermaid
-  1649 # Melusine Mermaid
+  1649, # Melusine Mermaid
+  1827, # Banshee
+  1874, # Chinese Dragon
+  1876, # Lycanthrope Yeti
 ].freeze
 
 POUCH_CREATURES = [
   1240, # Tuli
+  1241, # Tulimber
+  1242, # Tuliferno
   1370, # Vesi
+  1371, # Vesial
+  1372, # Vesisaur
   1638, # Muru
+  1639, # Muruchi
+  1640, # Murutain
+  1745, # Hadavale
   1752, # Mitmegu
   1753, # Jootmegu
   1754, # Rohitmegu
-  1755 # Lokemegu
+  1755, # Lokemegu
+  1850, # Gleaming Muru
+  1853, # Gleaming Tuli
+  1856, # Gleaming Vesi
 ].freeze
 
 __END__
