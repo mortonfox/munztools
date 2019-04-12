@@ -201,6 +201,7 @@ EVOLUTIONS = [
   1799, # Carnation Germination
   1800, # Carnation Growth
   1836, # Butterfly Egg
+  1837, # Caterpillar
 ].freeze
 
 RESELLERS = [
@@ -290,7 +291,9 @@ MYTHOLOGICALS = [
   1649, # Melusine Mermaid
   1827, # Banshee
   1874, # Chinese Dragon
+  1875, # Wyvern Dragon
   1876, # Lycanthrope Yeti
+  1877, # Reptoid Yeti
 ].freeze
 
 POUCH_CREATURES = [
@@ -310,7 +313,9 @@ POUCH_CREATURES = [
   1755, # Lokemegu
   1850, # Gleaming Muru
   1853, # Gleaming Tuli
+  1854, # Gleaming Tulimber
   1856, # Gleaming Vesi
+  1857, # Gleaming Vesial
 ].freeze
 
 __END__
