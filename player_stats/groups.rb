@@ -191,17 +191,26 @@ EVOLUTIONS = [
   1775, # Tulip Seed
   1776, # Tulip Germination
   1777, # Tulip Growth
+  1778, # Tulip Bud
   1782, # Rose Seed
   1783, # Rose Germination
   1784, # Rose Growth
+  1785, # Rose Bud
   1790, # Lily Seed
   1791, # Lily Germination
   1792, # Lily Growth
+  1793, # Lily Bud
   1798, # Carnation Seed
   1799, # Carnation Germination
   1800, # Carnation Growth
+  1801, # Carnation Bud
   1836, # Butterfly Egg
   1837, # Caterpillar
+  1838, # Chrysalis
+  1839, # Hatched Chrysalis
+  1840, # Morpho Butterfly
+  1841, # Monarch Butterfly
+  1842, # Lime Butterfly
 ].freeze
 
 RESELLERS = [
@@ -312,10 +321,13 @@ POUCH_CREATURES = [
   1754, # Rohitmegu
   1755, # Lokemegu
   1850, # Gleaming Muru
+  1851, # Gleaming Muruchi
   1853, # Gleaming Tuli
   1854, # Gleaming Tulimber
   1856, # Gleaming Vesi
   1857, # Gleaming Vesial
+  1858, # Gleaming Vesisaur
+  1919, # Pimedus
 ].freeze
 
 __END__
