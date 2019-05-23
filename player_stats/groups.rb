@@ -192,18 +192,33 @@ EVOLUTIONS = [
   1776, # Tulip Germination
   1777, # Tulip Growth
   1778, # Tulip Bud
+  1779, # Blue Tulip Blossom
+  1780, # Pink Tulip Blossom
+  1781, # White Tulip Blossom
   1782, # Rose Seed
   1783, # Rose Germination
   1784, # Rose Growth
   1785, # Rose Bud
+  1786, # Red Rose Blossom
+  1787, # Violet Rose Blossom
+  1788, # White Rose Blossom
+  1789, # Yellow Rose Blossom
   1790, # Lily Seed
   1791, # Lily Germination
   1792, # Lily Growth
   1793, # Lily Bud
+  1794, # Pink Lily Blossom
+  1795, # Violet Lily Blossom
+  1796, # White Lily Blossom
   1798, # Carnation Seed
   1799, # Carnation Germination
   1800, # Carnation Growth
   1801, # Carnation Bud
+  1802, # Pink Carnation Blossom
+  1803, # Red Carnation Blossom
+  1804, # Violet Carnation Blossom
+  1805, # White Carnation Blossom
+  1806, # Yellow Carnation Blossom
   1836, # Butterfly Egg
   1837, # Caterpillar
   1838, # Chrysalis
@@ -303,6 +318,7 @@ MYTHOLOGICALS = [
   1875, # Wyvern Dragon
   1876, # Lycanthrope Yeti
   1877, # Reptoid Yeti
+  1929, # Gorgon
 ].freeze
 
 POUCH_CREATURES = [
