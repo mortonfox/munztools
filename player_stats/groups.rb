@@ -49,7 +49,9 @@ PLACES = [
   1488, # Cemetery
   1551, # Unique Attraction
   1631, # Virtual Garden
-  1770 # Cinema
+  1770, # Cinema
+  1977, # Transportation
+  1978, # Play Park
 ].freeze
 
 VIRTUALS = [
@@ -319,6 +321,10 @@ MYTHOLOGICALS = [
   1876, # Lycanthrope Yeti
   1877, # Reptoid Yeti
   1929, # Gorgon
+  1995, # Griffin Pegasus
+  1996, # Alicorn Pegasus
+  1997, # Centaur Faun
+  1998, # Krampus Faun
 ].freeze
 
 POUCH_CREATURES = [
