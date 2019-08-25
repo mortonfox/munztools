@@ -228,6 +228,8 @@ EVOLUTIONS = [
   1840, # Morpho Butterfly
   1841, # Monarch Butterfly
   1842, # Lime Butterfly
+  2106, # Frog Egg
+  2107, # Tadpole
 ].freeze
 
 RESELLERS = [
@@ -325,6 +327,9 @@ MYTHOLOGICALS = [
   1996, # Alicorn Pegasus
   1997, # Centaur Faun
   1998, # Krampus Faun
+  2051, # Retired Fairy
+  2052, # Retired Banshee
+  2118, # Nymph
 ].freeze
 
 POUCH_CREATURES = [
@@ -350,6 +355,9 @@ POUCH_CREATURES = [
   1857, # Gleaming Vesial
   1858, # Gleaming Vesisaur
   1919, # Pimedus
+  2053, # Zombie Tuli
+  2054, # Zombie Vesi
+  2055, # Zombie Muru
 ].freeze
 
 __END__
