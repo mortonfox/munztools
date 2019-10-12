@@ -230,6 +230,11 @@ EVOLUTIONS = [
   1842, # Lime Butterfly
   2106, # Frog Egg
   2107, # Tadpole
+  2108, # Pollywog
+  2109, # Froglet
+  2110, # Tree Frog
+  2111, # Poison Dart Frog
+  2112, # Tomato Frog
 ].freeze
 
 RESELLERS = [
