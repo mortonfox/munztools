@@ -24,14 +24,17 @@ DESTINATIONS = [
   70, # Motel
   170, # Hotel
   470, # Virtual Resort
-  970 # Time Share
+  970, # Time Share
+  2145, # Treehouse
+  2183, # Vacation Condo
 ].freeze
 
 ROOMS = [
   71, # Motel Room
   171, # Hotel Room
   471, # Virtual Resort Room
-  971 # Time Share Room
+  971, # Time Share Room
+  2184, # Vacation Condo Room
 ].freeze
 
 PLACES = [
@@ -363,6 +366,7 @@ POUCH_CREATURES = [
   2053, # Zombie Tuli
   2054, # Zombie Vesi
   2055, # Zombie Muru
+  2240, # Puffle
 ].freeze
 
 __END__
