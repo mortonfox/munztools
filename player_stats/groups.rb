@@ -338,6 +338,10 @@ MYTHOLOGICALS = [
   2051, # Retired Fairy
   2052, # Retired Banshee
   2118, # Nymph
+  2252, # Cerberus Hydra
+  2253, # Cthulhu Hydra
+  2254, # Harpy Banshee
+  2255, # Witch Banshee
 ].freeze
 
 POUCH_CREATURES = [
@@ -367,6 +371,9 @@ POUCH_CREATURES = [
   2054, # Zombie Vesi
   2055, # Zombie Muru
   2240, # Puffle
+  2241, # Pufrain
+  2242, # Puflawn
+  2306, # Magnetus
 ].freeze
 
 __END__
