@@ -342,6 +342,7 @@ MYTHOLOGICALS = [
   2253, # Cthulhu Hydra
   2254, # Harpy Banshee
   2255, # Witch Banshee
+  2337, # Mother Earth
 ].freeze
 
 POUCH_CREATURES = [
