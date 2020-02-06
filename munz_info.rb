@@ -48,7 +48,7 @@ end
 
 def conv_coord coordstr, dirs
   coord = coordstr.to_f
-  dir = dirs[coord < 0 ? 1 : 0]
+  dir = dirs[coord.negative? ? 1 : 0]
   coord = coord.abs
   degs = coord.floor
   mins = (coord - degs) * 60

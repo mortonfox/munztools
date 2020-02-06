@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/TrailingCommaInArrayLiteral
+
 CLAN_WEAPONS = [
   52, # Mace
   53, # Longsword
@@ -376,5 +378,7 @@ POUCH_CREATURES = [
   2242, # Puflawn
   2306, # Magnetus
 ].freeze
+
+# rubocop:enable Style/TrailingCommaInArrayLiteral
 
 __END__

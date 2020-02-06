@@ -397,9 +397,9 @@ def run_reports data
 
   uncategorized = (
     data.keys - clan_weapons - jewels -
-    destinations - places - virtuals - 
-    flats - evolutions - resellers - 
-    elementals - zodiacs - 
+    destinations - places - virtuals -
+    flats - evolutions - resellers -
+    elementals - zodiacs -
     mythologicals - pouch_creatures
   )
 
