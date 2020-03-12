@@ -19,7 +19,9 @@ JEWELS = [
   242, # Topaz
   290, # Virtual Amethyst
   584, # Pink Diamond
-  681 # Virtual Sapphire
+  681, # Virtual Sapphire
+  2361, # Virtual Citrine
+  2362, # Virtual Onyx
 ].freeze
 
 DESTINATIONS = [
@@ -29,6 +31,8 @@ DESTINATIONS = [
   970, # Time Share
   2145, # Treehouse
   2183, # Vacation Condo
+  2356, # 2 Star Motel
+  2358, # 3 Star Motel
 ].freeze
 
 ROOMS = [
@@ -37,6 +41,8 @@ ROOMS = [
   471, # Virtual Resort Room
   971, # Time Share Room
   2184, # Vacation Condo Room
+  2357, # 2 Star Motel Room
+  2359, # 3 Star Motel Room
 ].freeze
 
 PLACES = [
@@ -377,6 +383,9 @@ POUCH_CREATURES = [
   2241, # Pufrain
   2242, # Puflawn
   2306, # Magnetus
+  2366, # Topaas
+  2367, # Ametust
+  2368, # Oniks
 ].freeze
 
 # rubocop:enable Style/TrailingCommaInArrayLiteral
