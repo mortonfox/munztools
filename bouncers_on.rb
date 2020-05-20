@@ -2,7 +2,7 @@
 
 # frozen_string_literal: true
 
-# Retrieve detailed information on a specific Munzee.
+# Show info about bouncers on a specific Munzee.
 
 require_relative 'munzee_api'
 require 'optparse'
@@ -16,7 +16,7 @@ def parse_cmdline
 
   optp.separator <<~ENDS
 
-    Retrieve detailed information on a specific Munzee.
+    Show info about bouncers on a specific Munzee.
 
   ENDS
 
@@ -48,32 +48,38 @@ def parse_cmdline
   args
 end
 
-def conv_coord coordstr, dirs
-  coord = coordstr.to_f
-  dir = dirs[coord.negative? ? 1 : 0]
-  coord = coord.abs
-  degs = coord.floor
-  mins = (coord - degs) * 60
-  "#{dir} #{degs} #{mins.round(3)} / #{coordstr}"
-end
-
-def show_info munz, url
+def bouncers_on munz, url
   result = munz.post('/munzee/', url: url, closest: 0)
-  result.each { |k, v|
-    valstr = case k
-             when 'latitude'
-               conv_coord(v, 'NS')
-             when 'longitude'
-               conv_coord(v, 'EW')
-             else
-               v.is_a?(String) || v.is_a?(Numeric) ? v.to_s : v.inspect
-             end
-    puts format('%-28s %s', "#{k}:", valstr)
+
+  puts <<-MSG
+#{result['friendly_name']} (#{result['munzee_id']})
+Deployed by #{result['creator_username']} (#{result['creator_user_id']})
+
+  MSG
+
+  bouncers = result['bouncers']
+  if !bouncers.is_a?(Array) || bouncers.empty?
+    puts 'No bouncers on this munzee.'
+    return
+  end
+
+  puts "There are #{bouncers.size} bouncers currently on this munzee:"
+  puts
+
+  bouncers.each_with_index { |bouncer, i|
+    puts <<-BOUNCERMSG
+#{i + 1}: #{bouncer['unicorn_munzee']['friendly_name']} (#{bouncer['unicorn_munzee']['munzee_id']})
+Deployed by #{bouncer['unicorn_munzee']['creator_username']} (#{bouncer['unicorn_munzee']['creator_user_id']})
+Landed on #{Time.at(bouncer['time_placed'].to_i)}
+Good until #{Time.at(bouncer['good_until'].to_i)}
+
+    BOUNCERMSG
   }
 end
 
 args = parse_cmdline
 munz = MunzeeAPI.new(force_login: args[:force_login])
-show_info(munz, args[:munzee_url])
+bouncers_on(munz, args[:munzee_url])
 
 __END__
+
