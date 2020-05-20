@@ -33,6 +33,7 @@ DESTINATIONS = [
   2183, # Vacation Condo
   2356, # 2 Star Motel
   2358, # 3 Star Motel
+  2426, # Skyland
 ].freeze
 
 ROOMS = [
@@ -63,6 +64,10 @@ PLACES = [
   1770, # Cinema
   1977, # Transportation
   1978, # Play Park
+  2445, # Bank
+  2446, # Beach
+  2447, # Campground
+  2448, # Golf
 ].freeze
 
 VIRTUALS = [
@@ -262,11 +267,12 @@ RESELLERS = [
 ].freeze
 
 ELEMENTALS = [
-  1086, # Air Mystery
   532, # Fire Mystery
   651, # Ice Mystery
   851, # Earth Mystery
-  1020 # Water Mystery
+  1020, # Water Mystery
+  1086, # Air Mystery
+  2391, # Electric Mystery
 ].freeze
 
 ZODIACS = [
@@ -351,6 +357,10 @@ MYTHOLOGICALS = [
   2254, # Harpy Banshee
   2255, # Witch Banshee
   2337, # Mother Earth
+  2477, # Minotaur Cyclops
+  2478, # Balor Cyclops
+  2479, # Vampire Nymph
+  2480, # Elf Nymph
 ].freeze
 
 POUCH_CREATURES = [
@@ -386,6 +396,7 @@ POUCH_CREATURES = [
   2366, # Topaas
   2367, # Ametust
   2368, # Oniks
+  2369, # Teemant
 ].freeze
 
 # rubocop:enable Style/TrailingCommaInArrayLiteral
