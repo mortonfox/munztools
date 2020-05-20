@@ -397,6 +397,8 @@ POUCH_CREATURES = [
   2367, # Ametust
   2368, # Oniks
   2369, # Teemant
+  2370, # Smaragd
+  2407, # Elekter
 ].freeze
 
 # rubocop:enable Style/TrailingCommaInArrayLiteral
