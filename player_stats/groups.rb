@@ -146,66 +146,66 @@ FLATS = [
 ].freeze
 
 EVOLUTIONS = [
-  807, # Muscle Car
-  809, # Penny-Farthing Bike
-  808, # First Wheel
-  839, # Safari Bus
-  841, # Safari Van
-  840, # Safari Truck
-  744, # Submarine
-  746, # Motorboat
-  745, # Canoe
-  702, # Championship Horse
-  706, # Racehorse
-  704, # Colt
-  736, # Field
-  739, # Potted Plant
-  740, # Garden
-  735, # Family
-  737, # Farmer
-  738, # Farmer and Wife
   658, # Tomato
-  666, # Tomato Plant
+  659, # Ear of Corn
+  660, # Carrot
+  661, # Peas
   662, # Tomato Seed
-  741, # Shark
-  743, # Fish
-  742, # Seaweed
-  685, # Bacon
-  699, # Piglet
-  701, # Pig
-  709, # Tractor
-  732, # Plow
-  731, # Hoe
-  708, # Barn
-  730, # Garden Shed
-  729, # Lean-To Shed
-  835, # King of the Jungle
-  838, # Lion
-  837, # Lion Cub
-  1057, # Treasure Chest
-  1055, # Coin
-  1056, # Bag of Coins
+  663, # Corn Seed
+  664, # Carrot Seed
+  665, # Peas Seed
+  666, # Tomato Plant
+  667, # Corn Stalk
+  668, # Carrot Plant
+  669, # Peas Plant
   678, # Golden Carrot
   679, # Golden Carrot Seed
   680, # Golden Carrot Plant
   684, # Milk
-  700, # Cow
+  685, # Bacon
   698, # Calf
-  660, # Carrot
-  668, # Carrot Plant
-  664, # Carrot Seed
-  659, # Ear of Corn
-  667, # Corn Stalk
-  663, # Corn Seed
-  661, # Peas
-  669, # Peas Plant
-  665, # Peas Seed
-  802, # Bones
-  801, # Dinosaur
-  800, # Egg
+  699, # Piglet
+  700, # Cow
+  701, # Pig
+  702, # Championship Horse
   703, # Eggs
+  704, # Colt
   705, # Chick
+  706, # Racehorse
   707, # Chicken
+  708, # Barn
+  709, # Tractor
+  729, # Lean-To Shed
+  730, # Garden Shed
+  731, # Hoe
+  732, # Plow
+  735, # Family
+  736, # Field
+  737, # Farmer
+  738, # Farmer and Wife
+  739, # Potted Plant
+  740, # Garden
+  741, # Shark
+  742, # Seaweed
+  743, # Fish
+  744, # Submarine
+  745, # Canoe
+  746, # Motorboat
+  800, # Egg
+  801, # Dinosaur
+  802, # Bones
+  807, # Muscle Car
+  808, # First Wheel
+  809, # Penny-Farthing Bike
+  835, # King of the Jungle
+  837, # Lion Cub
+  838, # Lion
+  839, # Safari Bus
+  840, # Safari Truck
+  841, # Safari Van
+  1055, # Coin
+  1056, # Bag of Coins
+  1057, # Treasure Chest
   1775, # Tulip Seed
   1776, # Tulip Germination
   1777, # Tulip Growth
@@ -251,6 +251,13 @@ EVOLUTIONS = [
   2110, # Tree Frog
   2111, # Poison Dart Frog
   2112, # Tomato Frog
+  2452, # Turtle Egg
+  2453, # Turtle Hatchling
+  2454, # Juvenile Turtle
+  2455, # Adult Turtle
+  2461, # Planula Larva
+  2462, # Polyp
+  2464, # Ephyra Larva
 ].freeze
 
 RESELLERS = [
@@ -361,6 +368,7 @@ MYTHOLOGICALS = [
   2478, # Balor Cyclops
   2479, # Vampire Nymph
   2480, # Elf Nymph
+  2524, # Poseidon
 ].freeze
 
 POUCH_CREATURES = [
@@ -399,6 +407,8 @@ POUCH_CREATURES = [
   2369, # Teemant
   2370, # Smaragd
   2407, # Elekter
+  2408, # Elekjoud
+  2409, # Elektrivool
 ].freeze
 
 # rubocop:enable Style/TrailingCommaInArrayLiteral
