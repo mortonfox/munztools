@@ -84,7 +84,11 @@ def time_to time
   hours, secs = secs.divmod(3_600)
   mins, secs = secs.divmod(60)
 
-  [plural(hours, 'hour'), plural(mins, 'minute'), plural(secs, 'second')].compact.join(' ')
+  [
+    hours.zero? ? nil : plural(hours, 'hour'),
+    mins.zero? ? nil : plural(mins, 'minute'),
+    secs.zero? ? nil : plural(secs, 'second')
+  ].compact.join(' ')
 end
 
 def plural num, noun
