@@ -3,9 +3,11 @@
 # Wrapper for Munzee API.
 # Requires oauth2 and launchy gems. (Run 'gem install oauth2 launchy')
 
-require 'oauth2'
-require 'webrick'
+require 'json'
 require 'launchy'
+require 'oauth2'
+require 'rest-client'
+require 'webrick'
 
 # Wrapper for Munzee API.
 class MunzeeAPI
@@ -116,12 +118,27 @@ class MunzeeAPI
 
     server.shutdown
 
-    token1 = @client.auth_code.get_token(auth_code, redirect_uri: @redirect_url)
+    # client.auth_code.get_token() no longer works in oauth2 1.4.7. We have to
+    # roll our own token exchange query using RestClient.
+    # token1 = @client.auth_code.get_token(auth_code, redirect_uri: @redirect_url)
 
     # Munzee returns the token two levels deep in the JSON response. Extract
     # the token and recreate our AccessToken.
-    token_hash = token1.params['data']['token']
+    # token_hash = token1.params['data']['token']
 
+    query_params = {
+      client_id: @client_id,
+      client_secret: @client_secret,
+      grant_type: 'authorization_code',
+      code: auth_code,
+      redirect_uri: @redirect_url
+    }
+    resp = RestClient.post(@client.token_url, query_params)
+    json = JSON.parse(resp.body)
+
+    # Munzee returns the token two levels deep in the JSON response. Extract
+    # the token and recreate our AccessToken.
+    token_hash = json['data']['token']
     @token = OAuth2::AccessToken.from_hash(@client, token_hash)
     @token.options[:header_format] = '%s'
 
