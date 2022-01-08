@@ -51,7 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   launchy
-  oauth2
+  oauth2 (= 1.4.4)
   oga
   rest-client
   rkelly-remix
